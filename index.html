@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./src/index.css">
+
+  <script src="https://d3js.org/d3.v6.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class='wrapper'>
+    
+    <header class='header'>
+      <div class='title'>
+        Data visualization project name: suicide prevention visualization project
+      </div> 
+      
+      <div class='right-header'>
+        <label> Select Year </label>
+          <select id="year-selector" name="year-selector" class='year-selector' onchange="yearSelected()" autocomplete="off">
+            <option selected="selected" value="all">All</option>
+            <option value="1985">1985</option>
+            <option value="1986">1986</option>
+            <option value="1987">1987</option>
+            <option value="1988">1988</option>
+            <option value="1989">1989</option>
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+        </select>
+      </div> 
+    </header>
+
+    <div class='container map-holder svg-container' id='map-holder'></div>
+    <div class='container map-legend' id='map-legend'>
+      <div class='legend-label'>
+        Suicides/100k pop
+      </div> 
+    </div>
+    <!-- <div class='container pca' id ='pca' style='display: block'></div>
+    <div class='container lineChart' id='lineChart' style='display:none'>
+      <button class='button-line' id='button-line' onclick="changeGDP()">Switch GDP</button>
+    </div> -->
+    <!-- <div class='container scatterPlot' id='scatterPlot' style='display: block'>         -->
+    </div>
+    
+  </div>
+
+  <script src="./src/helpers.js"></script>
+  <script src="./src/controller.js"></script>
+  <script src='./src/staticsForComponents/mapHolderStatic.js'></script>
+  <script src='./src/staticsForComponents/legendStatic.js'></script>
+  <script src='./src/staticsForComponents/scatterPlotStatic.js'></script>
+  <script src='./src/staticsForComponents/sexChartStatic.js'></script>
+  <script src='./src/staticsForComponents/ageChartStatic.js'></script>
+  <script src='./src/components/mapHolder.js'></script>
+  <script src="./src/components/legend.js"></script>
+  <script src='./src/components/scatterPlot.js'></script>
+  <script src='./src/components/sexChart.js'></script>
+  <script src='./src/components/ageChart.js'></script>
+  <script src='./src/components/lineChart.js'></script>
+
+</body>
+</html>

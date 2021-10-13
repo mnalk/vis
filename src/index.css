@@ -1,0 +1,197 @@
+:root {
+    --headerTop: 1%;
+    --headerMargin: 0.8%;
+    --labelsFont: 19px;
+    --textFont: 17px;
+    --textColor: white;
+    --selectionColor: lightblue;
+    --avgStatic: #80cdc1;
+}
+
+
+html,body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0; 
+    height: 100%; 
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #000000;
+    color:rgb(37, 54, 102);
+}
+.wrapper{
+    height: 96%;
+    max-width: 99%;
+    display: grid;
+    grid-template-columns: 20% 25% 12% 43.5%;
+    grid-template-rows: 7% 25% 23% 46%;
+    grid-gap: 4px;
+}
+.header{
+    background-color: rgb(18, 15, 19);
+    grid-column-start: 1;
+    grid-column-end:5;
+    margin-bottom: 3px;
+    display:inline;
+}
+.container{
+    border-radius: 25px;
+    background: rgb(141, 100, 100);
+}
+.map-holder{
+    margin-left: 3px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.map-legend{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    /*width: 100%;*/
+    /*padding-bottom: 100%;*/
+    vertical-align: center;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    background: rgb(185, 100, 100);
+    border: 1px solid rgb(150, 116, 6);
+    top: 0;
+    left: 0;
+}
+
+
+
+
+/* header */
+.title{
+    text-align: center;
+    margin-top: 0.6%;
+    font-size: 1.8em;
+}
+.left-header{
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-top: var(--headerTop);
+    margin-left: var(--headerMargin);
+    font-size: var(--labelsFont);
+    width: 9em;
+}
+.right-header{
+    position:absolute;
+    top: 0;
+    right: 0;
+    margin-top: var(--headerTop);
+    margin-right: var(--headerMargin);
+    font-size: var(--labelsFont);
+    width: 9em;
+}
+.year-selector {
+    margin-left: var(--headerTop);
+    border-width: 0 3px 0 3px;
+    border-style: solid;
+    border-color: #000205;
+    border-radius: 2em;
+    background-color: rgb(114, 89, 89);
+}
+
+
+
+
+
+/* commons */
+.tooltip {
+    position: absolute;
+    padding: 7px;
+    font-size: 0.8em;
+    color: rgb(207, 36, 36);
+    pointer-events: none;
+    background: rgb(230, 166, 166);
+    border: 2px solid rgb(216, 164, 164);
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px 0px rgba(88, 15, 61, 0.25);
+    max-width: 300px;
+    max-height: 500px;
+}
+.tick line, .domain {
+    stroke: lightgray;
+    opacity: 0.5;
+}
+.axis-text {
+    fill: var(--textColor);
+    font-size: var(--textFont);
+}
+.axis-label {
+    fill: var(--textColor);
+    font-size: var(--labelsFont);
+}
+.avg-line {
+    stroke: var(--avgStatic);
+    stroke-width: 2;
+}
+.avg-label {
+    fill: var(--avgStatic);
+    font-size: var(--labelsFont);
+}
+.avg-line-selected, .over-object {
+    stroke: var(--selectionColor);
+    stroke-width: 2;
+}
+.avg-label-selected {
+    fill: var(--selectionColor);
+    font-size: var(--labelsFont);
+}
+
+
+
+
+
+/* map */
+#map {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.countries {
+    fill: none;
+    stroke: rgb(26, 218, 26);
+    stroke-linejoin: round;
+}
+.caption {
+    fill: rgb(219, 30, 30);
+    text-anchor: start;
+    font-weight: bold;
+}
+.legend-label {
+    font-size: var(--labelsFont);
+    margin-top: 12%;
+    margin-left: 8%;
+}
+
+
+
+
+
+
+.selected-object {
+    stroke: var(--selectionColor);
+    stroke-width: 5;
+}
+
+
+
+
+
+
